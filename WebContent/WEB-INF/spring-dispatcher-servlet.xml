@@ -25,8 +25,12 @@
 	<!-- The following is for the static resources such as css, js, ... -->
 	<mvc:default-servlet-handler />
 
+	<!-- We run the interceptor only on one URL -->
 	<mvc:interceptors>
-		<bean class="com.chevtech.hellocontroller.DayOfWeekBasedAccessInterceptor" />
+		<mvc:interceptor>
+			<mvc:mapping path="/demos/welcome" />
+			<bean class="com.chevtech.hellocontroller.DayOfWeekBasedAccessInterceptor" />
+		</mvc:interceptor>
 	</mvc:interceptors>
 
 	<bean id="messageSource"
