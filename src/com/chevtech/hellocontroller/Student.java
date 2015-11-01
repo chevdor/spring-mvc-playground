@@ -1,17 +1,51 @@
 package com.chevtech.hellocontroller;
 
+
+import java.util.ArrayList;
+import java.util.Date;
+
 public class Student {
+	private String name;
+	private String hobby;
+	private long mobile;
+	private Date dob;
+	private ArrayList<String> skills;
+	
 	public Student() {
 		super();
 	}
 	
+	public long getMobile() {
+		return mobile;
+	}
+
+	public void setMobile(long mobile) {
+		this.mobile = mobile;
+	}
+
+	public Date getDob() {
+		return dob;
+	}
+
+	public void setDob(Date dob) {
+		this.dob = dob;
+	}
+
+	public ArrayList<String> getSkills() {
+		return skills;
+	}
+
+	public void setSkills(ArrayList<String> skills) {
+		this.skills = skills;
+	}
+
 	public Student(String name, String hobby) {
 		super();
 		this.name = name;
 		this.hobby = hobby;
 	}
-	private String name;
-	private String hobby;
+	
+	
 	public String getName() {
 		return name;
 	}
