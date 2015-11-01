@@ -5,13 +5,16 @@ import java.util.ArrayList;
 import java.util.Date;
 
 import javax.validation.constraints.Past;
+import javax.validation.constraints.Pattern;
 import javax.validation.constraints.Size;
 
 
 public class Student {
+	@Pattern(regexp="[^0-9]*")
 	private String name;
 	
 	@Size(min=3, max=10)
+	@Pattern(regexp="[^0-9]*")
 	private String hobby;
 	
 	private long mobile;

@@ -8,10 +8,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 <title>Insert title here</title>
+<link rel="stylesheet" type="text/css" href="/spring-mvc-playground/styles/style.css" />
+
 </head>
 <body>
 	<h1>${message}</h1>
+	<div class="error">
 	<form:errors path="student.*" />
+	</div>
+	
 	<form action="/spring-mvc-playground/form/confirm2" method="post">
 		<div>
 			<label for="name">Name</label> <input type="text" name="name" /><br />
