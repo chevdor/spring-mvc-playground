@@ -2,6 +2,9 @@ package com.chevtech.hellocontroller;
 
 import java.sql.Date;
 import java.text.SimpleDateFormat;
+
+import javax.validation.Valid;
+
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -48,6 +51,7 @@ public class HtmlFormController {
 
 	@RequestMapping(value="/confirm2", method = RequestMethod.POST)
 	protected ModelAndView confirm2(
+			@Valid
 			@ModelAttribute("student") Student student, BindingResult result
 			){ 
 

@@ -4,9 +4,14 @@ package com.chevtech.hellocontroller;
 import java.util.ArrayList;
 import java.util.Date;
 
+import javax.validation.constraints.Size;
+
 public class Student {
 	private String name;
+	
+	@Size(min=2, max=30)
 	private String hobby;
+	
 	private long mobile;
 	private Date dob;
 	private ArrayList<String> skills;
