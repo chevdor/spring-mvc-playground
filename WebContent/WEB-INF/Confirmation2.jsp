@@ -10,6 +10,7 @@
 <body>
 <h1>${message}</h1> 
 
+
 <div>name: ${student.getName()} </div>
 <div>hobby: ${student.getHobby()} </div>
 

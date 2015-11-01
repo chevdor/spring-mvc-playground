@@ -16,7 +16,7 @@ public class HtmlFormController {
 	@RequestMapping(value="/subscribe", method = RequestMethod.GET)
 	protected ModelAndView subscribe(){ 
 		ModelAndView modelanview = new ModelAndView("Admission");
-		
+		modelanview.addObject("message");
 		return modelanview;
 	}
 	
