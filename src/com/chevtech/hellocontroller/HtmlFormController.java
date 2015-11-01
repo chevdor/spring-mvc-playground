@@ -4,6 +4,7 @@ import java.util.Map;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -37,10 +38,16 @@ public class HtmlFormController {
 	
 	@RequestMapping(value="/confirm2", method = RequestMethod.POST)
 	protected ModelAndView confirm2(
-			@ModelAttribute("student") Student student
+			@ModelAttribute("student") Student student, BindingResult result
 			){ 
-		ModelAndView modelanview = new ModelAndView("Confirmation2");
 		
+		if (result.hasErrors()){
+			// we go back to the initial page
+			ModelAndView modelanview = new ModelAndView("Admission");
+			return modelanview;	
+		}
+		
+		ModelAndView modelanview = new ModelAndView("Confirmation2");
 		return modelanview;
 	}
 }
