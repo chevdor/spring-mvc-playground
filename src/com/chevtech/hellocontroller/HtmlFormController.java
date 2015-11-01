@@ -34,8 +34,10 @@ public class HtmlFormController {
 	protected ModelAndView confirm2(
 			@RequestParam Map<String,String> p
 			){ 
-		ModelAndView modelanview = new ModelAndView("Confirmation");
-		modelanview.addObject("msg", "Details: " + p.get("name") + " " + p.get("hobby"));
+		ModelAndView modelanview = new ModelAndView("Confirmation2");
+		Student std = new Student(p.get("name"), p.get("hobby"));
+		modelanview.addObject("message", "very cool, you are now subscribed!");
+		modelanview.addObject("student", std);
 		
 		return modelanview;
 	}
