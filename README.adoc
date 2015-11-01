@@ -1,4 +1,4 @@
 # spring-mvc-playground
 test
 
-## CH1
+There is probably not much interesting for a visitor here. This is just a playground for me to test and learn about Spring MVC.
