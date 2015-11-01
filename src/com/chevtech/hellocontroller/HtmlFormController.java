@@ -3,6 +3,7 @@ package com.chevtech.hellocontroller;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -16,7 +17,6 @@ public class HtmlFormController {
 	@RequestMapping(value="/subscribe", method = RequestMethod.GET)
 	protected ModelAndView subscribe(){ 
 		ModelAndView modelanview = new ModelAndView("Admission");
-		modelanview.addObject("message");
 		return modelanview;
 	}
 	
@@ -30,13 +30,16 @@ public class HtmlFormController {
 		
 		return modelanview;
 	}
+	@ModelAttribute
+	public void addMessage(Model m){
+		m.addAttribute("message", "We play with SpringMVC");
+	}
 	
 	@RequestMapping(value="/confirm2", method = RequestMethod.POST)
 	protected ModelAndView confirm2(
 			@ModelAttribute("student") Student student
 			){ 
 		ModelAndView modelanview = new ModelAndView("Confirmation2");
-		modelanview.addObject("message", "very cool, you are now subscribed!");
 		
 		return modelanview;
 	}
