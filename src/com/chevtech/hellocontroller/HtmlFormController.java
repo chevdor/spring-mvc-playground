@@ -27,7 +27,8 @@ public class HtmlFormController {
 		binder.setDisallowedFields(new String[]{"mobile"});
 		SimpleDateFormat funnyFormat= new SimpleDateFormat("yyyy***MM***dd");
 		binder.registerCustomEditor(Date.class, "dob", new CustomDateEditor(funnyFormat,false));
-	}
+		binder.registerCustomEditor(String.class, "name", new StudentNameEditor());
+		}
 
 	@RequestMapping(value="/subscribe", method = RequestMethod.GET)
 	protected ModelAndView subscribe(){ 
