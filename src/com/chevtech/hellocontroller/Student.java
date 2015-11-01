@@ -11,7 +11,7 @@ import javax.validation.constraints.Size;
 public class Student {
 	private String name;
 	
-	@Size(min=2, max=30, message="Buddy, you need avalue between 2 and 30, work it out!")
+	@Size(min=3, max=10, message="Buddy, you need avalue between {min} and {max}, work it out!")
 	private String hobby;
 	
 	private long mobile;
