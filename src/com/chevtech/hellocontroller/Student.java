@@ -10,7 +10,16 @@ public class Student {
 	private long mobile;
 	private Date dob;
 	private ArrayList<String> skills;
+	private Address address;
 	
+	public Address getAddress() {
+		return address;
+	}
+
+	public void setAddress(Address address) {
+		this.address = address;
+	}
+
 	public Student() {
 		super();
 	}
