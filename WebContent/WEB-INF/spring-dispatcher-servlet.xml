@@ -21,7 +21,14 @@
 			<value>.jsp</value>
 		</property>
 	</bean>
+
+	<!-- The following is for the static resources such as css, js, ... -->
 	<mvc:default-servlet-handler />
+
+	<mvc:interceptors>
+		<bean class="com.chevtech.hellocontroller.DayOfWeekBasedAccessInterceptor" />
+	</mvc:interceptors>
+
 	<bean id="messageSource"
 		class="org.springframework.context.support.ReloadableResourceBundleMessageSource">
 		<property name="basename" value="WEB-INF/studentmessages" />
