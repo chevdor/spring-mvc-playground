@@ -39,7 +39,7 @@
 				name="address.zipcode" /><br />
 		</div>
 		<div>
-			<input type="submit">submit</input>
+			<input type="submit"/>
 		</div>
 	</form>
 </body>

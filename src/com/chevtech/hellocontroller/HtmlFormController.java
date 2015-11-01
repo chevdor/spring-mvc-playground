@@ -22,7 +22,7 @@ import org.springframework.web.servlet.ModelAndView;
 public class HtmlFormController {
 	@InitBinder
 	public void initBinder(WebDataBinder binder){
-		binder.setDisallowedFields(new String[]{"mobile"});
+		//binder.setDisallowedFields(new String[]{"mobile"});
 		SimpleDateFormat funnyFormat= new SimpleDateFormat("yyyy***MM***dd");
 		binder.registerCustomEditor(Date.class, "dob", new CustomDateEditor(funnyFormat,false));
 		binder.registerCustomEditor(String.class, "name", new StudentNameEditor());

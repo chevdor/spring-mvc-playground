@@ -1,13 +1,11 @@
 package com.chevtech.hellocontroller;
 
-
 import java.util.ArrayList;
 import java.util.Date;
 
-import javax.validation.constraints.Past;
-import javax.validation.constraints.Pattern;
-import javax.validation.constraints.Size;
+import javax.validation.constraints.*;
 
+// more about constraints: http://docs.jboss.org/hibernate/validator/5.2/reference/en-US/html/ch02.html
 
 public class Student {
 	@Pattern(regexp="[^0-9]*")
@@ -17,6 +15,7 @@ public class Student {
 	@Pattern(regexp="[^0-9]*")
 	private String hobby;
 	
+	@Max(2222)
 	private long mobile;
 	
 	@Past
