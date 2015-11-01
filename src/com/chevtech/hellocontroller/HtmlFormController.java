@@ -2,11 +2,6 @@ package com.chevtech.hellocontroller;
 
 import java.sql.Date;
 import java.text.SimpleDateFormat;
-import java.util.Map;
-
-import javax.servlet.jsp.tagext.FunctionInfo;
-
-import org.springframework.beans.factory.annotation.CustomAutowireConfigurer;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

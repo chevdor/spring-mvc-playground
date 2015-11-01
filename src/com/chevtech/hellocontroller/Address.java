@@ -29,5 +29,5 @@ public class Address {
 		this.zipcode = zipcode;
 	}
 	private int zipcode;
-	
+
 }
