@@ -18,10 +18,9 @@
 	<div>skills: ${student.skills}</div>
 
 	<div>
-		<div>Address ${student.address.country} ${student.address.city} ${student.address.street} ${student.address.zipcode}
-		
-		</div>
-		
+		<div>Address ${student.address.country} ${student.address.city}
+			${student.address.street} ${student.address.zipcode}</div>
+
 	</div>
 
 </body>
