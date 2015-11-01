@@ -1,6 +1,10 @@
 package com.chevtech.hellocontroller;
 
 public class Student {
+	public Student() {
+		super();
+	}
+	
 	public Student(String name, String hobby) {
 		super();
 		this.name = name;

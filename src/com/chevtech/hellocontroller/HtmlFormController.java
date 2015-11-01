@@ -3,6 +3,7 @@ package com.chevtech.hellocontroller;
 import java.util.Map;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -32,12 +33,10 @@ public class HtmlFormController {
 	
 	@RequestMapping(value="/confirm2", method = RequestMethod.POST)
 	protected ModelAndView confirm2(
-			@RequestParam Map<String,String> p
+			@ModelAttribute("student") Student student
 			){ 
 		ModelAndView modelanview = new ModelAndView("Confirmation2");
-		Student std = new Student(p.get("name"), p.get("hobby"));
 		modelanview.addObject("message", "very cool, you are now subscribed!");
-		modelanview.addObject("student", std);
 		
 		return modelanview;
 	}
